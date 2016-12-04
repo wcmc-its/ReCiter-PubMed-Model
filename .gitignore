@@ -1,7 +1,6 @@
 # Directories #
 /build/
 /bin/
-target/
  
 # OS Files #
 .DS_Store
@@ -9,7 +8,6 @@ target/
 *.class
  
 # Package Files #
-*.jar
 *.war
 *.ear
 *.db
