@@ -5,6 +5,8 @@ public class PubMedArticle {
 	private MedlineCitation medlineCitation;
 	private PubMedData pubMedData;
 	
+	public PubMedArticle() {}
+	
 	public MedlineCitation getMedlineCitation() {
 		return medlineCitation;
 	}
