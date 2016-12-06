@@ -77,4 +77,3 @@ src/main/resources/data/scopus/*
 reciter.log
 logs/*
 *.log
-/target/
