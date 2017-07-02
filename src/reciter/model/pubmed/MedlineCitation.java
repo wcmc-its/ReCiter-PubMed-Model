@@ -1,7 +1,10 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitation {
 	
 	private enum MedlineCitationOwner {
@@ -36,12 +39,18 @@ public class MedlineCitation {
 	private MedlineCitationDate dateCreated;
 	private MedlineCitationDate dateCompleted;
 	private MedlineCitationDate dateRevised;
-	
 	private MedlineCitationArticle article;
 	private List<MedlineCitationMeshHeading> meshHeadingList;
 	private MedlineCitationKeywordList keywordList;
 	private List<MedlineCitationCommentsCorrections> commentsCorrectionsList;
-	
+
+	public MedlineCitationStatus getMedlineCitationStatus() {
+		return medlineCitationStatus;
+	}
+
+	public void setMedlineCitationStatus(MedlineCitationStatus medlineCitationStatus) {
+		this.medlineCitationStatus = medlineCitationStatus;
+	}
 	public MedlineCitationPMID getMedlineCitationPMID() {
 		return medlineCitationPMID;
 	}
