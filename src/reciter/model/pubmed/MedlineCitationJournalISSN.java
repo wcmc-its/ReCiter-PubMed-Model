@@ -1,18 +1,19 @@
 package reciter.model.pubmed;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
 
+@Builder
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationJournalISSN {
 
-	private enum IssnType {
-		ELECTRONIC,
-		PRINT,
-		UNDETERMINED
-	}
-	
-	private IssnType issnType;
-	private String issn;
-	
-	public MedlineCitationJournalISSN() {}
+    private IssnType issntype;
+    private String issn;
+    private enum IssnType {
+        ELECTRONIC,
+        PRINT,
+        UNDETERMINED
+    }
 }

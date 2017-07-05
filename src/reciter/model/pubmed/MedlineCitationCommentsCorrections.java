@@ -1,36 +1,16 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationCommentsCorrections {
 
-	private String refType;
-	private String refSource;
-	private String pmidVersion;
-	private String pmid;
-	
-	public MedlineCitationCommentsCorrections() {}
-	
-	public String getRefType() {
-		return refType;
-	}
-	public void setRefType(String refType) {
-		this.refType = refType;
-	}
-	public String getRefSource() {
-		return refSource;
-	}
-	public void setRefSource(String refSource) {
-		this.refSource = refSource;
-	}
-	public String getPmidVersion() {
-		return pmidVersion;
-	}
-	public void setPmidVersion(String pmidVersion) {
-		this.pmidVersion = pmidVersion;
-	}
-	public String getPmid() {
-		return pmid;
-	}
-	public void setPmid(String pmid) {
-		this.pmid = pmid;
-	}
+    private String reftype;
+    private String refsource;
+    private String pmidversion;
+    private String pmid;
 }

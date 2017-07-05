@@ -1,11 +1,16 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationJournalInfo {
-	private String country;
-	private String medlineTA;
-	private String nlmUniqueID;
-	private String issnLinking;
-	
-	public MedlineCitationJournalInfo() {}
-	
+
+    private String country;
+    private String medlineta;
+    private String nlmuniqueid;
+    private String issnlinking;
 }

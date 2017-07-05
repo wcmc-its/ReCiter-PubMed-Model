@@ -1,25 +1,23 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
+
 import java.util.List;
 
+@Builder
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationKeywordList {
-	private enum KeywordListOwner {
-		NASA,
-		PIP,
-		KIE,
-		NLM,
-		NOTNLM,
-		HHS
-	}
-	private KeywordListOwner keywordListOwner;
-	private List<MedlineCitationKeyword> keywordList;
-	
-	public List<MedlineCitationKeyword> getKeywordList() {
-		return keywordList;
-	}
-	public void setKeywordList(List<MedlineCitationKeyword> keywordList) {
-		this.keywordList = keywordList;
-	}
-	
-	public MedlineCitationKeywordList() {}
+    private KeywordListOwner keywordlistowner;
+    private List<MedlineCitationKeyword> keywordlist;
+    private enum KeywordListOwner {
+        NASA,
+        PIP,
+        KIE,
+        NLM,
+        NOTNLM,
+        HHS
+    }
 }

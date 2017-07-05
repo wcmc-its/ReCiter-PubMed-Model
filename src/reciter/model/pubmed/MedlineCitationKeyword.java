@@ -1,15 +1,14 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationKeyword {
 
-	private MedlineCitationYNEnum majorTopicYN;
-	private String keyword;
-	public String getKeyword() {
-		return keyword;
-	}
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-	
-	public MedlineCitationKeyword() {}
+    private MedlineCitationYNEnum majortopicyn;
+    private String keyword;
 }

@@ -1,28 +1,14 @@
 package reciter.model.pubmed;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedlineCitationMeshHeadingQualifierName {
-	private MedlineCitationYNEnum majorTopicYN;
-	private String qualifierNameUI;
-	private String qualifierName;
-	
-	public MedlineCitationMeshHeadingQualifierName() {}
-	
-	public MedlineCitationYNEnum getMajorTopicYN() {
-		return majorTopicYN;
-	}
-	public void setMajorTopicYN(MedlineCitationYNEnum majorTopicYN) {
-		this.majorTopicYN = majorTopicYN;
-	}
-	public String getQualifierNameUI() {
-		return qualifierNameUI;
-	}
-	public void setQualifierNameUI(String qualifierNameUI) {
-		this.qualifierNameUI = qualifierNameUI;
-	}
-	public String getQualifierName() {
-		return qualifierName;
-	}
-	public void setQualifierName(String qualifierName) {
-		this.qualifierName = qualifierName;
-	}
+    private MedlineCitationYNEnum majortopicyn;
+    private String qualifiernameui;
+    private String qualifiername;
 }
