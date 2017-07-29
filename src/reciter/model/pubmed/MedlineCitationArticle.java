@@ -14,11 +14,9 @@ import java.util.List;
 public class MedlineCitationArticle {
 
     private PubModel pubmodel;
-
-    ;
     private MedlineCitationJournal journal;
     private String articletitle;
-    private String pagination;
+    private MedlineCitationArticlePagination pagination;
     private MedlineCitationArticleELocationID elocationid;
     private MedlineCitationYNEnum authorlistcompleteyn;
     private List<MedlineCitationArticleAuthor> authorlist;
