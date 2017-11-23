@@ -12,4 +12,5 @@ import lombok.Setter;
 @DynamoDBDocument
 @NoArgsConstructor
 public class PubMedData {
+    private ArticleIdList articleIdList;
 }
