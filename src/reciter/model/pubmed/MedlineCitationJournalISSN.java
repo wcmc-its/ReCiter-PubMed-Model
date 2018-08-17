@@ -16,7 +16,8 @@ public class MedlineCitationJournalISSN {
 
     private IssnType issntype;
     private String issn;
-
+    
+    @DynamoDBDocument
     public enum IssnType {
         ELECTRONIC,
         PRINT,
