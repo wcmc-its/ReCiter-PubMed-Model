@@ -7,6 +7,7 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @DynamoDBDocument
 @NoArgsConstructor
@@ -16,9 +17,10 @@ public class MedlineCitationJournalISSN {
     private IssnType issntype;
     private String issn;
 
-    private enum IssnType {
+    public enum IssnType {
         ELECTRONIC,
         PRINT,
-        UNDETERMINED
+        UNDETERMINED,
+        LINKING
     }
 }
