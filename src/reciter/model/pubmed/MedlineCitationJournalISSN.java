@@ -1,7 +1,6 @@
 package reciter.model.pubmed;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedEnum;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
@@ -11,7 +10,6 @@ import lombok.*;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @DynamoDBDocument
-@DynamoDBTypeConvertedEnum
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationJournalISSN {
