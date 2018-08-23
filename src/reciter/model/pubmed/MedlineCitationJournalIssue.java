@@ -17,6 +17,7 @@ public class MedlineCitationJournalIssue {
     private String volume;
     private String issue;
     private MedlineCitationDate pubdate;
+    private String medlineDate;
 
     private enum CitedMedium {
         INTERNET,
