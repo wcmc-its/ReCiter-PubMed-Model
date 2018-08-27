@@ -13,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 public class MedlineCitationArticleELocationID {
 
-    private EIdType eidtype;
+    private String eidtype;
     private MedlineCitationYNEnum validyn;
     private String elocationid;
 
