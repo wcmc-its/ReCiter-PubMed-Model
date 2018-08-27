@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationKeywordList {
-    private KeywordListOwner keywordlistowner;
+    private String keywordlistowner;
     private List<MedlineCitationKeyword> keywordlist;
 
     private enum KeywordListOwner {

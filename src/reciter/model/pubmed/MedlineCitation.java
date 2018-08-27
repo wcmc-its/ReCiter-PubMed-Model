@@ -16,8 +16,8 @@ import java.util.List;
 public class MedlineCitation {
 
     private MedlineCitationPMID medlinecitationpmid;
-    private MedlineCitationOwner medlinecitationowner;
-    private MedlineCitationStatus medlinecitationstatus;
+    private String medlinecitationowner;
+    private String medlinecitationstatus;
     private MedlineCitationVersionDate medlinecitationversiondate;
     private MedlineCitationVersionID medlinecitationversionid;
     private MedlineCitationDate datecreated;

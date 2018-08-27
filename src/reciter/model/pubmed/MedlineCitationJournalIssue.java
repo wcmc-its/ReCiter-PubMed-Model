@@ -13,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 public class MedlineCitationJournalIssue {
 
-    private CitedMedium citedmedium;
+    private String citedmedium;
     private String volume;
     private String issue;
     private MedlineCitationDate pubdate;

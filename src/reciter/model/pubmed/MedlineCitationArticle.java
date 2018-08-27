@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class MedlineCitationArticle {
 
-    private PubModel pubmodel;
+    private String pubmodel;
     private MedlineCitationJournal journal;
     private String articletitle;
     private MedlineCitationArticlePagination pagination;
