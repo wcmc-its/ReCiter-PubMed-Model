@@ -24,8 +24,10 @@ public class MedlineCitation {
     private MedlineCitationDate datecompleted;
     private MedlineCitationDate daterevised;
     private MedlineCitationArticle article;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<MedlineCitationMeshHeading> meshheadinglist;
     private MedlineCitationKeywordList keywordlist;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<MedlineCitationCommentsCorrections> commentscorrectionslist;
 
     private enum MedlineCitationOwner {

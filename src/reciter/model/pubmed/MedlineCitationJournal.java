@@ -9,12 +9,12 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @DynamoDBDocument
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationJournal {
-
+	
     private List<MedlineCitationJournalISSN> issn;
     private MedlineCitationJournalIssue journalissue;
     private String title;

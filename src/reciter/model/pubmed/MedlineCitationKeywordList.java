@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class MedlineCitationKeywordList {
     private String keywordlistowner;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<MedlineCitationKeyword> keywordlist;
 
     private enum KeywordListOwner {

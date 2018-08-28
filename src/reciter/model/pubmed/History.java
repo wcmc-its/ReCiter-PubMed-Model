@@ -14,7 +14,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @DynamoDBDocument
 @NoArgsConstructor
 @AllArgsConstructor
