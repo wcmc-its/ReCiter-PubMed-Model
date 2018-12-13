@@ -18,6 +18,7 @@ public class MedlineCitationArticle {
 
     private String pubmodel;
     private MedlineCitationJournal journal;
+    private MedlineCitationArticleAbstract publicationAbstract;
     private String articletitle;
     private MedlineCitationArticlePagination pagination;
     private MedlineCitationArticleELocationID elocationid;

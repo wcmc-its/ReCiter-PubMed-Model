@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationArticleAbstract {
-
-    private List<MedlineCitationArticleAbstractText> abstracttextlist;
-    private String copyrightinformation;
+	
+    private List<MedlineCitationArticleAbstractText> abstractTexts;
+    private String copyrightInformation;
 }

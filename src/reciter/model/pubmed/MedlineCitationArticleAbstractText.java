@@ -7,10 +7,15 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @DynamoDBDocument
 public class MedlineCitationArticleAbstractText {
-    enum Label {
+    /*enum Label {
         BACKGROUND, OBJECTIVE, METHODS, RESULTS, CONCLUSIONS, UNASSIGNED
-    }
+    }*/
+	private String abstractTextLabel;
+	private String abstractTextNlmCategory;
+	private String abstractText;
 }
