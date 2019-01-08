@@ -34,6 +34,7 @@
         <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
         <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
 		<version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+		<version.maven-scm-provider-gitexe>1.9.5</version.maven-scm-provider-gitexe>
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
