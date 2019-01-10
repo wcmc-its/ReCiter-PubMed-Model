@@ -10,7 +10,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean install -Dmaven.test.skip=true
+      - mvn clean install -Dmaven.test.skip=true -DrepoToken=$COVERALLS_TOKEN
   post_build:
     commands:
       - echo Build completed on `date`
+      - mvn clean cobertura:cobertura coveralls:report -DrepoToken=$COVERALLS_TOKEN
