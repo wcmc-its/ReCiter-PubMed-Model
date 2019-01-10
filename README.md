@@ -4,3 +4,4 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/edu.cornell.weill.reciter/reciter-pubmed-model/badge.svg)](https://maven-badges.herokuapp.com/maven-central/edu.cornell.weill.reciter/reciter-pubmed-model)
 [![Coverage Status](https://coveralls.io/repos/github/wcmc-its/ReCiter-PubMed-Model/badge.svg?branch=94e928e38992511208da0f51c05869a5c3b283ce)](https://coveralls.io/github/wcmc-its/ReCiter-PubMed-Model?branch=94e928e38992511208da0f51c05869a5c3b283ce)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Github All Releases](https://img.shields.io/github/downloads/wcmc-its/ReCiter-PubMed-Model/total.svg)]()
