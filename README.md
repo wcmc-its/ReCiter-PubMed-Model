@@ -1,4 +1,5 @@
 # ReCiter-PubMed-Model
 
+![Build Status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiME5LMmk2MXdTM2ZocFBTOGFQWUl6V3dqQXVVeTNNT0d6a3g2aG5URksvamdFejFaRm5aamFhcjVHSXRzWTNBSlp5OUdURWFHWlhNWHNUbTNQOE5FTEtJPSIsIml2UGFyYW1ldGVyU3BlYyI6ImNHUUtpQVFVMkpBUE1WdTgiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/edu.cornell.weill.reciter/reciter-identity-model/badge.svg)](https://maven-badges.herokuapp.com/maven-central/edu.cornell.weill.reciter/reciter-identity-model)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
