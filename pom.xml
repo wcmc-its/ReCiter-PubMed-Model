@@ -32,7 +32,7 @@
     <scm>
 		<connection>scm:git:git://github.com/wcmc-its/ReCiter-PubMed-Model.git</connection>
 		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
-		<url>https://github.com/wcmc-its/ReCiter-Identity-Model</url>
+		<url>https://github.com/wcmc-its/ReCiter-Pubmed-Model</url>
 		<tag>2.0.1-SNAPSHOT</tag>
 	</scm>
     
