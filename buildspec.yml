@@ -15,4 +15,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - bash <(curl -s https://codecov.io/bash)
+      - curl -s https://codecov.io/bash
