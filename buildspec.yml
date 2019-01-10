@@ -11,6 +11,8 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean install -Dmaven.test.skip=true
+      - mvn cobertura:cobertura
   post_build:
     commands:
       - echo Build completed on `date`
+      - bash <(curl -s https://codecov.io/bash)
