@@ -14,5 +14,3 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo $COVERALLS_TOKEN
-      - mvn cobertura:cobertura coveralls:report -DrepoToken=$COVERALLS_TOKEN
