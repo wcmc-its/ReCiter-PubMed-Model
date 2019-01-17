@@ -16,7 +16,7 @@
 
 ## Data model
 
-The following is a sample record from DynamoDB for the Identity table.
+The following is a sample record from DynamoDB for the PubMedArticle table.
 
 ```
 {
