@@ -21,4 +21,5 @@ public class MedlineCitationArticleAuthor {
     private String affiliation;
     private String language;
     private String orcid;
+    private String equalContrib;
 }
