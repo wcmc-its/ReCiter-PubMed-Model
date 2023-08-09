@@ -29,6 +29,7 @@ public class MedlineCitation {
     private MedlineCitationKeywordList keywordlist;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<MedlineCitationCommentsCorrections> commentscorrectionslist;
+    private String coiStatement;
 
     private enum MedlineCitationOwner {
         NLM,
