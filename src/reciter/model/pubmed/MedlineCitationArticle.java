@@ -1,17 +1,22 @@
 package reciter.model.pubmed;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import lombok.*;
 
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
 @Builder
 @Getter
 @Setter
 @JsonInclude(Include.NON_NULL)
-@DynamoDBDocument
+@DynamoDbBean
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationArticle {
