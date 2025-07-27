@@ -9,6 +9,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MedlineCitationPublicationTypeBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -17,6 +22,10 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationPublicationType {
+    
+    /** The publicationtypeui. */
     private String publicationtypeui;
+    
+    /** The publicationtype. */
     private String publicationtype;
 }

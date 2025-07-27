@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationKeywordBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -18,6 +22,9 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationKeyword {
 
+    /** The majortopicyn. */
     private MedlineCitationYNEnum majortopicyn;
+    
+    /** The keyword. */
     private String keyword;
 }

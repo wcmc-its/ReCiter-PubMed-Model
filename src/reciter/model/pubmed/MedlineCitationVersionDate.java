@@ -4,6 +4,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * This class stores the version date as  string.
+ *
+ * @author ved4006
+ */
+
 @Builder
 @Getter
 @Setter
@@ -12,5 +18,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationVersionDate {
-    private String versiondate; // should be a date object, later convert.
+    
+    /** The versiondate. */
+    private String versiondate;
 }

@@ -11,6 +11,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationJournalBuilder.
+ */
 @Builder
 @Getter
 @Setter
@@ -20,8 +23,15 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationJournal {
 	
+    /** The Medline Citation Journal ISSN. */
     private List<MedlineCitationJournalISSN> issn;
+    
+    /** The journalissue. */
     private MedlineCitationJournalIssue journalissue;
+    
+    /** The title. */
     private String title;
+    
+    /** The iso abbreviation. */
     private String isoAbbreviation;
 }

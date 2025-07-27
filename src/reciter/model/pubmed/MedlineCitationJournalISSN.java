@@ -10,6 +10,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * Represents the ISSN (International Standard Serial Number) element of a journal
+ * in a MEDLINE citation, including the type of ISSN (print, electronic, etc.).
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -20,13 +25,29 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationJournalISSN {
 
+	 /**
+     * Type of ISSN eg:("Electronic", "Print", "Linking").
+     */
     private String issntype;
+    
+    /** The ISSN value. */
     private String issn;
     
+    /**
+     * Enumeration of valid ISSN types used in PubMed metadata.
+     */
     public enum IssnType {
+        
+        /** The electronic. */
         ELECTRONIC,
+        
+        /** The print. */
         PRINT,
+        
+        /** The undetermined. */
         UNDETERMINED,
+        
+        /** The linking. */
         LINKING
     }
 }

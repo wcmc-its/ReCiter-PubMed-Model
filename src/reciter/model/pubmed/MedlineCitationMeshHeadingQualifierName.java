@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationMeshHeadingQualifierNameBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -17,7 +21,13 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationMeshHeadingQualifierName {
+    
+    /** The majortopicyn. */
     private MedlineCitationYNEnum majortopicyn;
+    
+    /** The qualifiernameui. */
     private String qualifiernameui;
+    
+    /** The qualifiername. */
     private String qualifiername;
 }
