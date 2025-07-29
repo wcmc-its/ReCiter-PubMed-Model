@@ -8,7 +8,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
 
 /**
- * Represents the `<PubmedData>` section of a PubMed article XML.
+ * Represents the PubmedData section of a PubMed article XML.
  * @author ved4006
  */
 @Getter

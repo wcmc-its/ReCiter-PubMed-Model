@@ -14,7 +14,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
-
+/**
+ * MedlineCitationGrant class holds medline citation grant information.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter

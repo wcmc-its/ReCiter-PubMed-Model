@@ -18,6 +18,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * MedlineCitation Article class holds medline citation information.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter

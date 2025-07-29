@@ -14,6 +14,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * MedlineCitationChemical class holds medline citation chemical information.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter

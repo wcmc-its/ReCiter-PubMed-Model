@@ -13,7 +13,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
-
+/**
+ * MedlineCitationJournalVolume class holds medline citation journal Volume information.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter

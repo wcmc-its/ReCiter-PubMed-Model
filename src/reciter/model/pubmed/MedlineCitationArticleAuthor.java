@@ -9,7 +9,10 @@ package reciter.model.pubmed;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
-
+/**
+ * MedlineCitationArticleAuthor class holds medline citation author information.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
