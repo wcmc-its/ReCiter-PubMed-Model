@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationYNEnumBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -12,5 +16,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationYNEnum {
-    private String val; // "Y" or "N"
+    
+    /** The val. eg("Y" or "N"). */
+    private String val;
 }

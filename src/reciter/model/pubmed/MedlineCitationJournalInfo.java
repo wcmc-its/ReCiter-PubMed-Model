@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationJournalInfoBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -18,8 +22,15 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationJournalInfo {
 
+    /** The country. */
     private String country;
+    
+    /** The medlineta. */
     private String medlineta;
+    
+    /** The nlmuniqueid. */
     private String nlmuniqueid;
+    
+    /** The issnlinking. */
     private String issnlinking;
 }

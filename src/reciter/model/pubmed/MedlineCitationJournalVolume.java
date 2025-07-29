@@ -1,5 +1,10 @@
 package reciter.model.pubmed;
 
+/**
+ * Represents the volume and issue information for a journal in a Medline citation.
+ * Typically used to identify the specific edition of a journal in which an article appears.
+ * @author ved4006
+ */
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +23,9 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationJournalVolume {
 
+    /** The volume. */
     private String volume;
+    
+    /** The issue. */
     private String issue;
 }

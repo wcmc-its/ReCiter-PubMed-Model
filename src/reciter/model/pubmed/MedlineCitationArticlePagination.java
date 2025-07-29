@@ -12,6 +12,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * The Class MedlineCitationArticlePaginationBuilder.
+ * @author ved4006
+ */
 @Builder
 @Getter
 @Setter
@@ -20,5 +24,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationArticlePagination {
+    
+    /** The medlinepgns. */
     private List<String> medlinepgns;
 }

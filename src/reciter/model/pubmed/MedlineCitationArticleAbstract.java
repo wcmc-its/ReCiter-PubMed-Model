@@ -1,5 +1,10 @@
 package reciter.model.pubmed;
 
+/**
+ * Represents the abstract section of a Medline journal article,
+ * including the abstract text(s) and any associated copyright information.
+ * @author ved4006
+ */
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -20,6 +25,9 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @AllArgsConstructor
 public class MedlineCitationArticleAbstract {
 	
+    /** The abstract texts. */
     private List<MedlineCitationArticleAbstractText> abstractTexts;
+    
+    /** The copyright information. */
     private String copyrightInformation;
 }

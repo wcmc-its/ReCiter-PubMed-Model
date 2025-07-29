@@ -9,6 +9,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
+/**
+ * Represents the PMID and version 
+ * @author ved4006
+ *
+ */
 @Builder
 @Getter
 @Setter
@@ -17,6 +22,14 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedlineCitationPMID {
+	
+	/**
+     * The unique PubMed Identifier (PMID).
+     */
     private long pmid;
+    
+    /**
+     * The version of the citation.
+     */
     private String version;
 }

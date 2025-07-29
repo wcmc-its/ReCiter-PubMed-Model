@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.cornell.weill.reciter</groupId>
     <artifactId>reciter-pubmed-model</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3.0.0</version>
     <name>ReCiter-PubMed-Model</name>
     <description>A set of classes representing a PubMed article</description>
     <url>https://github.com/wcmc-its/ReCiter-PubMed-Model</url>
@@ -40,7 +40,7 @@
 		<connection>scm:git:git://github.com/wcmc-its/ReCiter-PubMed-Model.git</connection>
 		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
 		<url>https://github.com/wcmc-its/ReCiter-Pubmed-Model</url>
-		<tag>2.0.4-SNAPSHOT</tag>
+		<tag>3.0.0</tag>
 	</scm>
     
     <distributionManagement>
@@ -59,22 +59,71 @@
         <generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
         <generated-sources-java-path>main/java</generated-sources-java-path>
         <version.maven-release-plugin>2.5.3</version.maven-release-plugin>
-        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
-        <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
-		<version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+        <version.maven-gpg-plugin>3.1.0</version.maven-gpg-plugin>
+        <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
+		<version.maven-javadoc-plugin>3.6.3</version.maven-javadoc-plugin>
 		<version.maven-scm-provider-gitexe>1.9.5</version.maven-scm-provider-gitexe>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>
 		<corretto.version>17</corretto.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<!-- Apply the plugin directly here -->
+			<plugin>
+			  <groupId>org.sonatype.central</groupId>
+			  <artifactId>central-publishing-maven-plugin</artifactId>
+			  <version>0.8.0</version>
+			  <extensions>true</extensions>
+			  <configuration>
+				<publishingServerId>central</publishingServerId>
+			  </configuration>
+			</plugin>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${version.maven-source-plugin}</version>
+					<executions>
+					<execution>
+					<id>attach-sources</id>
+					<phase>package</phase>
+					<goals>
+					<goal>jar</goal>
+					</goals>
+					</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${version.maven-javadoc-plugin}</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<links>
+							<link>https://docs.oracle.com/en/java/javase/17/docs/api/</link>
+						</links>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadoc</id>
+							<phase>package</phase> 
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+		 </plugins>	
         <pluginManagement>
 	        <plugins>
 	            <plugin>
 	                <artifactId>maven-compiler-plugin</artifactId>
 	                <version>3.10.1</version>
 	                <configuration>
+						<encoding>UTF-8</encoding>				
 	                    <source>${java.version}</source>
                     	<target>${java.version}</target>
 	                </configuration>
