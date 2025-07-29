@@ -69,6 +69,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+				   
     <build>
         <sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -296,13 +297,7 @@
 								<goals>
 									<goal>sign</goal>
 								</goals>
-								<configuration>
-									<gpgArguments>
-										<arg>--pinentry-mode</arg>
-										<arg>loopback</arg>
-									</gpgArguments>
-								</configuration>
-							</execution>
+								</execution>
 						</executions>
 					</plugin>
 				</plugins>
