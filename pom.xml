@@ -208,12 +208,14 @@
             <artifactId>aws-java-sdk-dynamodb</artifactId>
             <version>1.11.34</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen-maven-plugin -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-codegen-maven-plugin</artifactId>
-            <version>3.0.0-rc1</version>
-        </dependency>
+        <!-- NOTE: io.swagger:swagger-codegen-maven-plugin must NOT be declared here as a
+             <dependency>. It is a Maven *plugin* used only for code generation from
+             model-schema/pubmed-model.yaml (configured under <build><pluginManagement>), not a
+             library these classes compile or run against. Declared as a compile dependency it
+             leaked its entire code-generation closure (an embedded Maven/Aether/Plexus runtime,
+             swagger-parser/codegen release candidates, rhino, json-schema-validator: ~50 jars)
+             onto the runtime classpath of every consumer of this model. No class under src/
+             references io.swagger.*, so removing it changes no compiled output. -->
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
