@@ -2,6 +2,11 @@
 /build/
 /bin/
  
+.classpath
+.factorypath
+.project
+.settings/
+
 # OS Files #
 .DS_Store
  
