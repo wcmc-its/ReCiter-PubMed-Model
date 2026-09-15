@@ -30,6 +30,13 @@
 			<timezone>GMT+5.5</timezone>
 		</developer>
 		<developer>
+			<name>Veerraju Duppalapudi</name>
+			<email>ved4006@med.cornell.edu</email>
+			<organization>Weill Cornell Medicine ITS</organization>
+			<organizationUrl>https://github.com/wcmc-its</organizationUrl>
+			<timezone>GMT+5.5</timezone>
+		</developer>
+		<developer>
 			<name>Sarbajit Dutta</name>
 			<email>szd2013@med.cornell.edu</email>
 			<organization>Weill Cornell Medicine ITS</organization>
@@ -63,7 +70,6 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-			<!-- Apply the plugin directly here -->
 			<plugin>
 				<groupId>org.sonatype.central</groupId>
 				<artifactId>central-publishing-maven-plugin</artifactId>
