@@ -188,7 +188,7 @@
 				<plugin>
 					<groupId>org.openapitools</groupId>
 					<artifactId>openapi-generator-maven-plugin</artifactId>
-					<version>7.3.0</version>
+					<version>7.25.0</version>
 					<executions>
 						<execution>
 							<id>generate-spring-java-client</id>
@@ -200,9 +200,11 @@
 								<inputSpec>${yaml.file}</inputSpec>
 								<configOptions>
 									<sourceFolder>${generated-sources-java-path}</sourceFolder>
+									<useSpringBoot4>true</useSpringBoot4>
+                   					<useJackson3>true</useJackson3>
 								</configOptions>
 								<output>${generated-sources-path}</output>
-								<language>java</language>
+								<generatorName>java</generatorName>
 								<modelPackage>reciter.model.pubmed</modelPackage>
 							</configuration>
 						</execution>
