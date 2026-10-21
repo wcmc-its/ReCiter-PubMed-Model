@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.cornell.weill.reciter</groupId>
 	<artifactId>reciter-pubmed-model</artifactId>
-	<version>4.0.0</version>
+	<version>4.0.0-SNAPSHOT</version>
 	<name>ReCiter-PubMed-Model</name>
 	<description>A set of classes representing a PubMed article</description>
 	<url>https://github.com/wcmc-its/ReCiter-PubMed-Model</url>
@@ -50,7 +50,7 @@
 		<developerConnection>
 			scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
 		<url>https://github.com/wcmc-its/ReCiter-Pubmed-Model</url>
-		<tag>4.0.0</tag>
+		<tag>4.0.0-SNAPSHOT</tag>
 	</scm>
 	<properties>
 		<yaml.file>${project.basedir}/model-schema/pubmed-model.yaml</yaml.file>
