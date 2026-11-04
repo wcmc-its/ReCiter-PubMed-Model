@@ -46,24 +46,22 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/wcmc-its/ReCiter-PubMed-Model.git</connection>
-		<developerConnection>
-			scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
-		<url>https://github.com/wcmc-its/ReCiter-Pubmed-Model</url>
+		<connection>scm:git:https://github.com/wcmc-its/ReCiter-PubMed-Model.git</connection>
+		<developerConnection>scm:git:git@github.com:wcmc-its/ReCiter-PubMed-Model.git</developerConnection>
+		<url>https://github.com/wcmc-its/ReCiter-PubMed-Model</url>
 		<tag>4.0.0</tag>
 	</scm>
 	<properties>
-		<yaml.file>${project.basedir}/model-schema/pubmed-model.yaml</yaml.file>
-		<generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
-		<generated-sources-java-path>main/java</generated-sources-java-path>
+		<java.version>21</java.version>
+		<version.spring-boot>4.0.8</version.spring-boot>
+		<version.aws-sdk>2.47.5</version.aws-sdk>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<version.maven-release-plugin>3.1.1</version.maven-release-plugin>
 		<version.maven-gpg-plugin>3.2.7</version.maven-gpg-plugin>
 		<version.maven-source-plugin>3.4.0</version.maven-source-plugin>
 		<version.maven-javadoc-plugin>3.11.2</version.maven-javadoc-plugin>
 		<version.maven-scm-provider-gitexe>2.1.0</version.maven-scm-provider-gitexe>
-		<java.version>21</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<build>
@@ -156,60 +154,6 @@
 					</dependencies>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
-					<version>${version.maven-source-plugin}</version>
-					<executions>
-						<execution>
-							<id>attach-sources</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>${version.maven-javadoc-plugin}</version>
-					<configuration>
-						<encoding>UTF-8</encoding>
-					</configuration>
-					<executions>
-						<execution>
-							<id>attach-javadoc</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.openapitools</groupId>
-					<artifactId>openapi-generator-maven-plugin</artifactId>
-					<version>7.25.0</version>
-					<executions>
-						<execution>
-							<id>generate-spring-java-client</id>
-							<phase>generate-sources</phase>
-							<goals>
-								<goal>generate</goal>
-							</goals>
-							<configuration>
-								<inputSpec>${yaml.file}</inputSpec>
-								<configOptions>
-									<sourceFolder>${generated-sources-java-path}</sourceFolder>
-									<useSpringBoot4>true</useSpringBoot4>
-                   					<useJackson3>true</useJackson3>
-								</configOptions>
-								<output>${generated-sources-path}</output>
-								<generatorName>java</generatorName>
-								<modelPackage>reciter.model.pubmed</modelPackage>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
 					<artifactId>coveralls-maven-plugin</artifactId>
 					<version>4.3.0</version>
@@ -234,7 +178,14 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>4.0.8</version>
+				<version>${version.spring-boot}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>software.amazon.awssdk</groupId>
+				<artifactId>bom</artifactId>
+				<version>${version.aws-sdk}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -257,13 +208,11 @@
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>dynamodb</artifactId>
-			<version>2.47.5</version>
 		</dependency>
 
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>dynamodb-enhanced</artifactId>
-			<version>2.47.5</version>
 		</dependency>
 	</dependencies>
 	<profiles>
